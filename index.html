@@ -2,270 +2,80 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Marcelo Rambo Martins — Engenheiro de Software. Escalando negócios com tecnologia.">
+    <meta property="og:title" content="Marcelo Rambo Martins">
+    <meta property="og:description" content="Engenheiro de Software. Te ajudo a escalar seus negócios através da tecnologia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marcelorambo.com/">
+    <meta property="og:image" content="https://marcelorambo.com/marcelo.png">
+    <meta name="twitter:card" content="summary">
     <title>Marcelo Rambo Martins</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 50%, #1a1a1a 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .container {
-            width: 100%;
-            background: rgba(42, 42, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid #555;
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            text-align: center;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .profile-section {
-            margin-bottom: 30px;
-        }
-
-        .profile-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #4a4a4a, #6a6a6a);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s ease;
-            border: 2px solid #666;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
-
-        .profile-name {
-            font-size: 24px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .profile-bio {
-            font-size: 16px;
-            color: #cccccc;
-            line-height: 1.5;
-        }
-
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .link-item {
-            background: #353535;
-            border: 2px solid #555;
-            border-radius: 15px;
-            padding: 18px 20px;
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .link-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .link-item:hover::before {
-            left: 100%;
-        }
-
-        .link-item:hover {
-            border-color: #777;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-            background: linear-gradient(135deg, #4a4a4a, #5a5a5a);
-            color: white;
-        }
-
-        .link-icon {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        .social-link svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        .social-links {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: #353535;
-            border: 2px solid #555;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 20px;
-            color: #cccccc;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: #4a4a4a;
-            border-color: #777;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 30px 20px;
-                margin: 10px;
-            }
-            
-            .profile-name {
-                font-size: 22px;
-            }
-            
-            .link-item {
-                padding: 16px 18px;
-                font-size: 15px;
-            }
-        }
-
-        .container-body{
-            height: 300px;
-            align-content: center;
-            color: #d1e206;
-        }
-
-        .footer {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #555;
-            font-size: 14px;
-            color: #999;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="profile-section">
             <div class="profile-image">
-                <img src="marcelo.png" alt="marcelo">
+                <img src="marcelo.png" alt="Retrato de Marcelo Rambo Martins" width="100" height="100">
             </div>
             <h1 class="profile-name">Marcelo Rambo Martins</h1>
-            <p class="profile-bio">Engenheiro de Software, te ajudo a escalar seus negócios atráves da tecnologia.</p>
+            <p class="profile-bio">Engenheiro de Software, te ajudo a escalar seus negócios através da tecnologia.</p>
         </div>
 
-        <div class="container-body">
-            <p><b>Em breve: projetos que atuei.</b></p>
+        <section class="container-body" aria-labelledby="exp-heading">
+            <h2 id="exp-heading" class="experience-heading">Onde atuei</h2>
+            <p class="experience-lead">Resumo da trajetória profissional (dados públicos do <a href="https://www.linkedin.com/in/marcelo-martins-a59ab3a0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>): mais de 8 anos em desenvolvimento de software, com foco em C# (.NET), React, Node.js e SQL — APIs REST, microsserviços, ERP e produtos SaaS.</p>
+            <ul class="experience-list">
+                <li>
+                    <span class="experience-company">Poliedro Educação</span>
+                    <span class="experience-meta">Desenvolvedor sênior · desde set/2024</span>
+                    Tech lead de squad (interno e terceirizado), cerimônias Scrum, WebAPI e microsserviços em C# (.NET) com Apache Pulsar, Node.js, PostgreSQL e MongoDB.
+                </li>
+                <li>
+                    <span class="experience-company">Cyncly</span>
+                    <span class="experience-meta">Desenvolvedor sênior · ago/2023 – ago/2024</span>
+                    ERP: novas funcionalidades, manutenção, APIs, análise técnica e participação nas cerimônias ágeis; apoio a colegas.
+                </li>
+                <li>
+                    <span class="experience-company">Scoreplan</span>
+                    <span class="experience-meta">Desenvolvedor .NET · mar/2020 – ago/2023</span>
+                    SaaS de planejamento estratégico; framework interno em C# (.NET) e React; testes com NUnit; migração .NET Framework + JS para .NET 5 + React (JWT, CancellationToken, SonarQube).
+                </li>
+                <li>
+                    <span class="experience-company">Conecta Softwares</span>
+                    <span class="experience-meta">Desenvolvedor de software · out/2018 – mar/2020</span>
+                    ERP e gestão de projetos; Vue.js, ASP.NET MVC, Xamarin, SQL Server, Entity Framework, TFS; BPM/BPMN.
+                </li>
+                <li>
+                    <span class="experience-company">SIGE Cloud</span>
+                    <span class="experience-meta">Developer · mar/2015 – fev/2016</span>
+                    ERP em SaaS: suporte, testes e desenvolvimento com AngularJS, ASP.NET MVC, C# e MongoDB.
+                </li>
+            </ul>
+            <p class="experience-foot">Formação complementar: FIAP (2023–2024). Certificações recentes incluem Tech Lead e Docker (Alura), além de nanocursos FIAP em cloud, DevOps e tecnologias emergentes.</p>
+            <p class="experience-source"><a href="https://www.linkedin.com/in/marcelo-martins-a59ab3a0/" target="_blank" rel="noopener noreferrer">Ver perfil completo no LinkedIn</a></p>
+        </section>
+
+        <div class="links-container">
+            <a href="links/" class="link-item">
+                <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+                </svg>
+                Links e redes sociais
+            </a>
         </div>
 
         <div class="footer">
-            <p>© 2025 Atlas Softwares. Todos os direitos reservados.</p>
+            <p>© <span id="footer-year"></span> Atlas Softwares. Todos os direitos reservados.</p>
         </div>
     </div>
 
     <script>
-        function openLink(url) {
-            // Animação de clique
-            event.target.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                event.target.style.transform = '';
-            }, 150);
-            
-            // Abrir link
-            window.open(url, '_blank');
-        }
-
-        // Adicionar efeito de hover nos links
-        document.querySelectorAll('.link-item').forEach(link => {
-            link.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-2px)';
-            });
-            
-            link.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Animação de entrada dos links
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('.link-item');
-            links.forEach((link, index) => {
-                link.style.opacity = '0';
-                link.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    link.style.transition = 'all 0.5s ease';
-                    link.style.opacity = '1';
-                    link.style.transform = 'translateY(0)';
-                }, index * 100 + 200);
-            });
-        });
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

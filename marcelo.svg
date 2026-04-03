@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="avatar-title">
+  <title id="avatar-title">Marcelo Rambo Martins</title>
+  <defs>
+    <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a4a4a"/>
+      <stop offset="100%" style="stop-color:#6a6a6a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="50" fill="url(#avatar-grad)"/>
+  <text x="50" y="58" text-anchor="middle" fill="#fff" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700">MR</text>
+</svg>
