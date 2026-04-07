@@ -69,9 +69,16 @@
                 </ul>
             </section>
 
-            <div class="vaga-cta" id="candidatura">
+            <div
+                class="vaga-cta"
+                id="candidatura"
+                data-funnel-vaga-id="k9m2p7qx4n"
+                data-funnel-vaga-title="Desenvolvedor(a) Backend .NET"
+                data-funnel-track-url="https://vyhhyrlbhjtntvizeqau.supabase.co/functions/v1/track-funnel"
+                data-funnel-anon-key="8b54e9aa6708c1fadc69838f66c1a1d583c1985bb808925677390fbc833add00"
+            >
                 <p class="vaga-cta-hint vaga-cta-hint--lead">Inicie sua candidatura em uma página dedicada, com etapas e envio dos dados para análise.</p>
-                <a class="btn-candidatar" href="../../cadastrar/k9m2p7qx4n/">Candidatar-se</a>
+                <a class="btn-candidatar" id="btnCandidatar" href="../../cadastrar/k9m2p7qx4n/">Candidatar-se</a>
             </div>
         </article>
 
@@ -80,5 +87,61 @@
         </footer>
     </div>
 
+    <script>
+        (function () {
+            var root = document.getElementById('candidatura');
+            if (!root) return;
+
+            var trackUrl = root.getAttribute('data-funnel-track-url') || '';
+            var anonKey = root.getAttribute('data-funnel-anon-key') || '';
+            var vagaId = root.getAttribute('data-funnel-vaga-id') || '';
+            var vagaTitle = root.getAttribute('data-funnel-vaga-title') || '';
+            var btn = document.getElementById('btnCandidatar');
+
+            function getSessionId() {
+                var key = 'goldvagas_session_id';
+                var existing = localStorage.getItem(key);
+                if (existing) return existing;
+
+                var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                var out = '';
+                var buf = new Uint8Array(16);
+                crypto.getRandomValues(buf);
+                for (var i = 0; i < buf.length; i++) out += chars[buf[i] % chars.length];
+                localStorage.setItem(key, out);
+                return out;
+            }
+
+            function track(eventName, metadata) {
+                if (!trackUrl || trackUrl.indexOf('track-funnel') === -1) return;
+                var payload = {
+                    event_name: eventName,
+                    vaga_id: vagaId,
+                    session_id: getSessionId(),
+                    metadata: metadata || {}
+                };
+
+                var headers = { 'Content-Type': 'application/json' };
+                if (anonKey) {
+                    headers.apikey = anonKey;
+                    headers.Authorization = 'Bearer ' + anonKey;
+                }
+
+                fetch(trackUrl, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(payload),
+                    keepalive: true
+                }).catch(function () {});
+            }
+
+            track('view_vaga', { vaga_title: vagaTitle });
+            if (btn) {
+                btn.addEventListener('click', function () {
+                    track('click_candidatar', { vaga_title: vagaTitle });
+                });
+            }
+        })();
+    </script>
 </body>
 </html>

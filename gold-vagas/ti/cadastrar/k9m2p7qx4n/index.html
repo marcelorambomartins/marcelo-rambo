@@ -37,6 +37,7 @@
                     data-vaga-title="Desenvolvedor(a) Backend .NET"
                     data-whatsapp="555195126599"
                     data-edge-url="https://vyhhyrlbhjtntvizeqau.supabase.co/functions/v1/submit-candidatura"
+                    data-track-url="https://vyhhyrlbhjtntvizeqau.supabase.co/functions/v1/track-funnel"
                     data-anon-key="8b54e9aa6708c1fadc69838f66c1a1d583c1985bb808925677390fbc833add00"
                     aria-labelledby="applyWizardTitle"
                 >
@@ -165,6 +166,7 @@
             var vagaTitle = root.getAttribute('data-vaga-title') || '';
             var whatsapp = root.getAttribute('data-whatsapp') || '';
             var edgeUrl = root.getAttribute('data-edge-url') || '';
+            var trackUrl = root.getAttribute('data-track-url') || '';
             var anonKey = root.getAttribute('data-anon-key') || '';
 
             var waLink = document.getElementById('whatsappFinalize');
@@ -231,6 +233,44 @@
                 };
             }
 
+            function getSessionId() {
+                var key = 'goldvagas_session_id';
+                var existing = localStorage.getItem(key);
+                if (existing) return existing;
+
+                var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                var out = '';
+                var buf = new Uint8Array(16);
+                crypto.getRandomValues(buf);
+                for (var i = 0; i < buf.length; i++) out += chars[buf[i] % chars.length];
+                localStorage.setItem(key, out);
+                return out;
+            }
+
+            function track(eventName, metadata) {
+                if (!trackUrl || trackUrl.indexOf('track-funnel') === -1) return;
+                var payload = {
+                    event_name: eventName,
+                    vaga_id: slug,
+                    session_id: getSessionId(),
+                    candidate_id: (candidatoIdInput.value || '').trim(),
+                    metadata: metadata || {}
+                };
+
+                var headers = { 'Content-Type': 'application/json' };
+                if (anonKey && anonKey.indexOf('SUA_SUPABASE_ANON_KEY') === -1) {
+                    headers.apikey = anonKey;
+                    headers.Authorization = 'Bearer ' + anonKey;
+                }
+
+                fetch(trackUrl, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(payload),
+                    keepalive: true
+                }).catch(function () {});
+            }
+
             async function persistCandidatura() {
                 if (hasPersisted) return true;
                 if (!edgeUrl || edgeUrl.indexOf('SEU_PROJECT_REF') !== -1) {
@@ -268,9 +308,11 @@
 
                     hasPersisted = true;
                     setStatus('Candidatura salva com sucesso.', 'success');
+                    track('save_candidatura_ok', { nome: payload.nome });
                     return true;
                 } catch (error) {
                     setStatus(error.message || 'Erro inesperado ao salvar candidatura.', 'error');
+                    track('save_candidatura_error', { mensagem: error.message || 'erro_desconhecido' });
                     return false;
                 } finally {
                     isSubmitting = false;
@@ -299,6 +341,7 @@
                 btnPrev.disabled = n === 1;
                 if (n === total) {
                     updateWhatsAppLink();
+                    track('step_4_ready');
                     waLink.focus();
                 }
             }
@@ -318,11 +361,18 @@
 
             candidatoIdInput.value = generateCandidatoId();
             form.addEventListener('submit', function (e) { e.preventDefault(); });
-            waLink.addEventListener('click', function () { updateWhatsAppLink(); });
+            waLink.addEventListener('click', function () {
+                updateWhatsAppLink();
+                track('click_whatsapp');
+            });
 
             btnNext.addEventListener('click', async function () {
                 if (isSubmitting) return;
                 if (!validateStep(current)) return;
+
+                if (current === 1) track('step_1_ok');
+                if (current === 2) track('step_2_ok');
+                if (current === 3) track('step_3_ok');
 
                 if (current === 3) {
                     var ok = await persistCandidatura();
@@ -337,6 +387,7 @@
                 if (current > 1) showStep(current - 1);
             });
 
+            track('view_cadastrar', { vaga_title: vagaTitle });
             showStep(1);
         })();
     </script>
