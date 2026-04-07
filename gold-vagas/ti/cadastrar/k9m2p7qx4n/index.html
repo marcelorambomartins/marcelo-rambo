@@ -113,6 +113,15 @@
                                     <option value="5plus">Mais de 5 anos</option>
                                 </select>
                             </div>
+                            <div class="apply-field">
+                                <label for="senioridade">Grau de Senioridade</label>
+                                <select id="senioridade" name="senioridade" required>
+                                    <option value="">Selecione</option>
+                                    <option value="junior">Júnior</option>
+                                    <option value="pleno">Pleno</option>
+                                    <option value="senior">Sênior</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="apply-step" data-step="3" role="region" aria-labelledby="step3-title" hidden>
@@ -229,6 +238,7 @@
                     exp_dotnet: document.getElementById('expDotnet').value,
                     exp_sql: document.getElementById('expSql').value,
                     exp_micro: document.getElementById('expMicro').value,
+                    senioridade: document.getElementById('senioridade').value,
                     challenge_answer: (document.getElementById('challengeAnswer').value || '').trim()
                 };
             }
