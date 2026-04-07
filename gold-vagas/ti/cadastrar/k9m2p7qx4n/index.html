@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Candidatura para Desenvolvedor(a) Backend .NET — Gold Vagas TI.">
+    <title>Candidatura | Desenvolvedor(a) Backend .NET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../vagas-ti.css">
+</head>
+<body>
+    <div class="vagas-page vaga-detail">
+        <nav class="vagas-nav" aria-label="Navegação">
+            <a href="../../" class="vagas-nav-brand">GoldVagas</a>
+            <span class="vagas-nav-sep" aria-hidden="true">·</span>
+            <a href="../../vaga/k9m2p7qx4n/">← Voltar para a vaga</a>
+            <span class="vagas-nav-sep" aria-hidden="true">·</span>
+            <a href="../../">Vagas em TI</a>
+        </nav>
+
+        <article>
+            <header class="vaga-header">
+                <p class="vaga-id">Vaga · <code>k9m2p7qx4n</code></p>
+                <h1 class="vaga-title">Candidatura — Desenvolvedor(a) Backend .NET</h1>
+                <p class="vaga-lead">Preencha as etapas abaixo. Ao finalizar, abriremos o WhatsApp com sua identificação de candidatura.</p>
+            </header>
+
+            <div class="vaga-cta" id="candidatura">
+                <p class="vaga-cta-hint vaga-cta-hint--lead">Complete as etapas abaixo para enviar a sua candidatura. No final, você será direcionado ao WhatsApp para algumas perguntas finais.</p>
+
+                <section
+                    class="apply-wizard"
+                    data-apply-wizard
+                    data-slug="k9m2p7qx4n"
+                    data-vaga-title="Desenvolvedor(a) Backend .NET"
+                    data-whatsapp="555195126599"
+                    data-edge-url="https://vyhhyrlbhjtntvizeqau.supabase.co/functions/v1/submit-candidatura"
+                    data-anon-key="8b54e9aa6708c1fadc69838f66c1a1d583c1985bb808925677390fbc833add00"
+                    aria-labelledby="applyWizardTitle"
+                >
+                    <h2 id="applyWizardTitle" class="apply-wizard__title">Candidatura em etapas</h2>
+
+                    <ol class="apply-stepper" aria-label="Progresso da candidatura">
+                        <li class="apply-stepper__item is-active" data-step-indicator="1"><span class="apply-stepper__num">1</span> Dados</li>
+                        <li class="apply-stepper__item" data-step-indicator="2"><span class="apply-stepper__num">2</span> Experiência</li>
+                        <li class="apply-stepper__item" data-step-indicator="3"><span class="apply-stepper__num">3</span> Desafio</li>
+                        <li class="apply-stepper__item" data-step-indicator="4"><span class="apply-stepper__num">4</span> Finalizar</li>
+                    </ol>
+
+                    <form id="candidaturaForm" class="apply-wizard__form" novalidate>
+                        <div class="apply-step is-active" data-step="1" role="region" aria-labelledby="step1-title">
+                            <h3 id="step1-title" class="apply-step__heading">Etapa 1 — Dados</h3>
+                            <p class="apply-step__intro">Informações para contato e perfil profissional.</p>
+                            <div class="apply-field">
+                                <label for="applyNome">Nome completo</label>
+                                <input id="applyNome" name="nome" type="text" autocomplete="name" required placeholder="Como devemos te chamar" minlength="2">
+                            </div>
+                            <div class="apply-field">
+                                <label for="candidatoId">Seu código de candidato</label>
+                                <input id="candidatoId" name="candidato_id" type="text" readonly required aria-readonly="true" title="Gerado automaticamente — guarde para referência">
+                                <p class="apply-field-hint">Código único gerado para identificar a sua candidatura.</p>
+                            </div>
+                            <div class="apply-field">
+                                <label for="applyEmail">E-mail</label>
+                                <input id="applyEmail" name="email" type="email" autocomplete="email" required placeholder="seu@email.com">
+                            </div>
+                            <div class="apply-field">
+                                <label for="applyGithub">GitHub</label>
+                                <input id="applyGithub" name="github" type="url" autocomplete="url" inputmode="url" placeholder="https://github.com/seu-usuario" required>
+                            </div>
+                            <div class="apply-field">
+                                <label for="applyLinkedin">LinkedIn</label>
+                                <input id="applyLinkedin" name="linkedin" type="url" autocomplete="url" inputmode="url" placeholder="https://www.linkedin.com/in/seu-perfil" required>
+                            </div>
+                        </div>
+
+                        <div class="apply-step" data-step="2" role="region" aria-labelledby="step2-title" hidden>
+                            <h3 id="step2-title" class="apply-step__heading">Etapa 2 — Experiência</h3>
+                            <p class="apply-step__intro">Quanto tempo de experiência prática você tem em cada tema?</p>
+                            <div class="apply-field">
+                                <label for="expDotnet">Quanto tempo você trabalha com .NET</label>
+                                <select id="expDotnet" name="exp_dotnet" required>
+                                    <option value="">Selecione</option>
+                                    <option value="nunca">Ainda não trabalhei formalmente com .NET</option>
+                                    <option value="menos1">Menos de 1 ano</option>
+                                    <option value="1a2">1 a 2 anos</option>
+                                    <option value="3a5">3 a 5 anos</option>
+                                    <option value="5plus">Mais de 5 anos</option>
+                                </select>
+                            </div>
+                            <div class="apply-field">
+                                <label for="expSql">Quanto tempo você trabalha com bancos relacionais</label>
+                                <select id="expSql" name="exp_sql" required>
+                                    <option value="">Selecione</option>
+                                    <option value="nunca">Ainda não trabalhei formalmente</option>
+                                    <option value="menos1">Menos de 1 ano</option>
+                                    <option value="1a2">1 a 2 anos</option>
+                                    <option value="3a5">3 a 5 anos</option>
+                                    <option value="5plus">Mais de 5 anos</option>
+                                </select>
+                            </div>
+                            <div class="apply-field">
+                                <label for="expMicro">Quanto tempo você trabalha com microsserviços</label>
+                                <select id="expMicro" name="exp_micro" required>
+                                    <option value="">Selecione</option>
+                                    <option value="nunca">Ainda não trabalhei formalmente com microsserviços</option>
+                                    <option value="menos1">Menos de 1 ano</option>
+                                    <option value="1a2">1 a 2 anos</option>
+                                    <option value="3a5">3 a 5 anos</option>
+                                    <option value="5plus">Mais de 5 anos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="apply-step" data-step="3" role="region" aria-labelledby="step3-title" hidden>
+                            <h3 id="step3-title" class="apply-step__heading">Etapa 3 — Desafio técnico</h3>
+                            <div class="apply-challenge">
+                                <p class="apply-challenge__lead">Leia o cenário e responda no campo abaixo (pode ser em texto corrido ou pseudocódigo).</p>
+                                <div class="apply-challenge__box">
+                                    <p><strong>Cenário:</strong> você precisa expor um endpoint em <strong>ASP.NET Core</strong> que recebe um <code>POST</code> com JSON <code>{"email": "string", "nome": "string"}</code>, valida se o e-mail tem formato válido e se <code>nome</code> tem entre 2 e 80 caracteres, persiste em uma tabela <code>Candidatos</code> (Id GUID, Nome, Email, CriadoEm UTC) e devolve <code>201 Created</code> com o corpo <code>{"id": "...", "nome": "...", "email": "..."}</code>.</p>
+                                    <p><strong>Perguntas:</strong></p>
+                                    <ol class="apply-challenge__list">
+                                        <li>Onde você colocaria as regras de validação (camada / classe) e por quê?</li>
+                                        <li>Como evitar expor detalhes internos em caso de erro inesperado?</li>
+                                        <li>Que teste automatizado você escreveria primeiro para esse fluxo?</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="apply-field">
+                                <label for="challengeAnswer">Sua resposta</label>
+                                <textarea id="challengeAnswer" name="challenge_answer" rows="8" required minlength="40" placeholder="Descreva sua abordagem (mínimo 40 caracteres)."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="apply-step" data-step="4" role="region" aria-labelledby="step4-title" hidden>
+                            <h3 id="step4-title" class="apply-step__heading">Etapa 4 — WhatsApp</h3>
+                            <p class="apply-step__intro">Para concluir, faremos algumas perguntas complementares pelo WhatsApp. Ao clicar no botão, o aplicativo ou a web do WhatsApp será aberto com uma mensagem já contendo o <strong>identificador da vaga</strong> e o <strong>título</strong>.</p>
+                            <p class="apply-step__note">Dica: revise as etapas anteriores antes de enviar; os dados preenchidos nesta página ainda não são salvos em servidor (apenas no seu navegador, até você abrir o WhatsApp). A mensagem incluirá seu <strong>nome</strong> e o <strong>CandidatoId</strong> da etapa 1.</p>
+                            <p class="apply-sync-status" id="applySyncStatus" hidden></p>
+                            <a class="btn-whatsapp" id="whatsappFinalize" href="#" target="_blank" rel="noopener noreferrer">Finalizar Candidatura no WhatsApp</a>
+                        </div>
+
+                        <div class="apply-wizard__nav">
+                            <button type="button" class="apply-btn apply-btn--ghost" id="wizardPrev" hidden>Voltar</button>
+                            <button type="button" class="apply-btn apply-btn--primary" id="wizardNext">Próxima etapa</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </article>
+
+        <footer class="vagas-footer">
+            <p>Gold Vagas · TI · <code>/gold-vagas/ti/cadastrar/k9m2p7qx4n</code></p>
+        </footer>
+    </div>
+
+    <script>
+        (function () {
+            var root = document.querySelector('[data-apply-wizard]');
+            if (!root) return;
+
+            var slug = root.getAttribute('data-slug') || '';
+            var vagaTitle = root.getAttribute('data-vaga-title') || '';
+            var whatsapp = root.getAttribute('data-whatsapp') || '';
+            var edgeUrl = root.getAttribute('data-edge-url') || '';
+            var anonKey = root.getAttribute('data-anon-key') || '';
+
+            var waLink = document.getElementById('whatsappFinalize');
+            var nomeInput = document.getElementById('applyNome');
+            var candidatoIdInput = document.getElementById('candidatoId');
+            var statusEl = document.getElementById('applySyncStatus');
+
+            var steps = root.querySelectorAll('.apply-step');
+            var indicators = root.querySelectorAll('[data-step-indicator]');
+            var btnNext = document.getElementById('wizardNext');
+            var btnPrev = document.getElementById('wizardPrev');
+            var form = document.getElementById('candidaturaForm');
+            var current = 1;
+            var total = steps.length;
+            var hasPersisted = false;
+            var isSubmitting = false;
+
+            function generateCandidatoId() {
+                var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                var len = 12;
+                var out = '';
+                var buf = new Uint8Array(len);
+                crypto.getRandomValues(buf);
+                for (var i = 0; i < len; i++) out += chars[buf[i] % chars.length];
+                return out;
+            }
+
+            function setStatus(message, type) {
+                if (!statusEl) return;
+                if (!message) {
+                    statusEl.hidden = true;
+                    statusEl.textContent = '';
+                    statusEl.className = 'apply-sync-status';
+                    return;
+                }
+                statusEl.hidden = false;
+                statusEl.textContent = message;
+                statusEl.className = 'apply-sync-status apply-sync-status--' + (type || 'info');
+            }
+
+            function updateWhatsAppLink() {
+                var nome = (nomeInput.value || '').trim();
+                var cid = (candidatoIdInput.value || '').trim();
+                var text =
+                    'Candidato: ' + nome +
+                    ' | CandidatoId: ' + cid +
+                    ' | VagaId: ' + slug +
+                    ' | Vaga: ' + vagaTitle;
+                waLink.href = 'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(text);
+            }
+
+            function collectPayload() {
+                return {
+                    vaga_id: slug,
+                    candidato_id: (candidatoIdInput.value || '').trim(),
+                    nome: (nomeInput.value || '').trim(),
+                    email: (document.getElementById('applyEmail').value || '').trim(),
+                    github: (document.getElementById('applyGithub').value || '').trim(),
+                    linkedin: (document.getElementById('applyLinkedin').value || '').trim(),
+                    exp_dotnet: document.getElementById('expDotnet').value,
+                    exp_sql: document.getElementById('expSql').value,
+                    exp_micro: document.getElementById('expMicro').value,
+                    challenge_answer: (document.getElementById('challengeAnswer').value || '').trim()
+                };
+            }
+
+            async function persistCandidatura() {
+                if (hasPersisted) return true;
+                if (!edgeUrl || edgeUrl.indexOf('SEU_PROJECT_REF') !== -1) {
+                    setStatus('Configure data-edge-url com a URL real da sua Edge Function no HTML.', 'error');
+                    return false;
+                }
+
+                isSubmitting = true;
+                btnNext.disabled = true;
+                btnPrev.disabled = true;
+                btnNext.textContent = 'Salvando...';
+                setStatus('Salvando candidatura...', 'info');
+
+                try {
+                    var payload = collectPayload();
+                    var headers = { 'Content-Type': 'application/json' };
+                    if (anonKey && anonKey.indexOf('SUA_SUPABASE_ANON_KEY') === -1) {
+                        headers.apikey = anonKey;
+                        headers.Authorization = 'Bearer ' + anonKey;
+                    }
+
+                    var response = await fetch(edgeUrl, {
+                        method: 'POST',
+                        headers: headers,
+                        body: JSON.stringify(payload)
+                    });
+
+                    var data = {};
+                    try { data = await response.json(); } catch (_err) {}
+
+                    if (!response.ok) {
+                        var message = data && data.error ? data.error : 'Falha ao salvar candidatura.';
+                        throw new Error(message);
+                    }
+
+                    hasPersisted = true;
+                    setStatus('Candidatura salva com sucesso.', 'success');
+                    return true;
+                } catch (error) {
+                    setStatus(error.message || 'Erro inesperado ao salvar candidatura.', 'error');
+                    return false;
+                } finally {
+                    isSubmitting = false;
+                    btnNext.disabled = false;
+                    btnPrev.disabled = current === 1;
+                    btnNext.textContent = 'Próxima etapa';
+                }
+            }
+
+            function showStep(n) {
+                current = n;
+                steps.forEach(function (el) {
+                    var s = parseInt(el.getAttribute('data-step'), 10);
+                    var on = s === n;
+                    el.hidden = !on;
+                    el.classList.toggle('is-active', on);
+                });
+                indicators.forEach(function (el) {
+                    var s = parseInt(el.getAttribute('data-step-indicator'), 10);
+                    el.classList.toggle('is-active', s === n);
+                    el.classList.toggle('is-done', s < n);
+                });
+                btnPrev.hidden = n === 1;
+                btnNext.hidden = n === total;
+                btnNext.textContent = 'Próxima etapa';
+                btnPrev.disabled = n === 1;
+                if (n === total) {
+                    updateWhatsAppLink();
+                    waLink.focus();
+                }
+            }
+
+            function validateStep(n) {
+                var stepEl = root.querySelector('.apply-step[data-step="' + n + '"]');
+                if (!stepEl) return true;
+                var fields = stepEl.querySelectorAll('input, select, textarea');
+                for (var i = 0; i < fields.length; i++) {
+                    if (!fields[i].checkValidity()) {
+                        fields[i].reportValidity();
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            candidatoIdInput.value = generateCandidatoId();
+            form.addEventListener('submit', function (e) { e.preventDefault(); });
+            waLink.addEventListener('click', function () { updateWhatsAppLink(); });
+
+            btnNext.addEventListener('click', async function () {
+                if (isSubmitting) return;
+                if (!validateStep(current)) return;
+
+                if (current === 3) {
+                    var ok = await persistCandidatura();
+                    if (!ok) return;
+                }
+
+                if (current < total) showStep(current + 1);
+            });
+
+            btnPrev.addEventListener('click', function () {
+                if (isSubmitting) return;
+                if (current > 1) showStep(current - 1);
+            });
+
+            showStep(1);
+        })();
+    </script>
+</body>
+</html>
