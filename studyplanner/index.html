@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Planeje seus estudos com clareza: saiba quanto estudar por dia e quando você termina o curso. Timer, metas e previsão de término em um só lugar.">
+    <meta property="og:title" content="StudyPlanner — Planejamento de estudos com previsão de término">
+    <meta property="og:description" content="Defina prazo, acompanhe o tempo e veja sua data de conclusão. Menos ansiedade, mais consistência.">
+    <meta property="og:type" content="website">
+    <title>StudyPlanner — Quando você termina? Quanto estudar hoje?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-mesh" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#">StudyPlanner</a>
+            <nav class="nav" aria-label="Principal">
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#produto">Produto</a>
+            </nav>
+            <a class="btn btn--ghost btn--sm nav-cta" href="#lista">Entrar na lista</a>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Menu móvel" aria-hidden="true">
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#produto">Produto</a>
+            <a class="btn btn--primary" href="#lista">Entrar na lista</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">SaaS de planejamento de estudos</p>
+                    <h1>Saiba <span class="text-gradient">quando termina</span> e <span class="text-gradient">quanto estudar</span> por dia</h1>
+                    <p class="lead">Cadastre cursos e aulas com duração, defina um prazo e acompanhe o ritmo. O StudyPlanner calcula sua meta diária, prevê a data de conclusão e mostra se você está no ritmo — com timer e histórico visual.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn--primary" href="#lista">Quero acesso antecipado</a>
+                        <a class="btn btn--secondary" href="#produto">Ver o app</a>
+                    </div>
+                    <ul class="hero-bullets" role="list">
+                        <li>Previsão de término com base no seu ritmo real</li>
+                        <li>Meta de estudo do dia calculada automaticamente</li>
+                        <li>Indicador “no ritmo” ou “atrasado” em um relance</li>
+                    </ul>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-frame">
+                        <img src="assets/app-heatmap.png" alt="Tela do app: resumo do curso com progresso, meta do dia e histórico de estudos em grade" width="390" height="844" loading="eager" fetchpriority="high">
+                    </div>
+                    <div class="floating-card floating-card--a" aria-hidden="true">
+                        <span class="fc-label">Meta de hoje</span>
+                        <span class="fc-value">2h</span>
+                        <span class="fc-sub">para cumprir o prazo</span>
+                    </div>
+                    <div class="floating-card floating-card--b" aria-hidden="true">
+                        <span class="fc-badge">No ritmo</span>
+                        <span class="fc-label">Previsão</span>
+                        <span class="fc-value fc-value--sm">14 dias</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="logos-strip" aria-label="Focado em quem estuda com prazo">
+            <div class="container strip-inner">
+                <span>Cursos online</span>
+                <span>Concursos</span>
+                <span>Certificações</span>
+                <span>Bootcamps</span>
+                <span>Idiomas</span>
+            </div>
+        </section>
+
+        <section id="como-funciona" class="section section--alt">
+            <div class="container">
+                <h2 class="section-title">Como funciona</h2>
+                <p class="section-desc">Três passos para deixar de adivinhar e passar a planejar com números.</p>
+                <ol class="steps">
+                    <li>
+                        <span class="step-num">1</span>
+                        <h3>Monte seu curso</h3>
+                        <p>Informe aulas e tempo estimado. O total estudado e o restante ficam sempre visíveis.</p>
+                    </li>
+                    <li>
+                        <span class="step-num">2</span>
+                        <h3>Defina o prazo</h3>
+                        <p>Escolha quando quer concluir. Nós calculamos quantas horas você precisa por dia.</p>
+                    </li>
+                    <li>
+                        <span class="step-num">3</span>
+                        <h3>Estude com timer</h3>
+                        <p>Registre sessões, veja a previsão atualizada e mantenha o hábito com o histórico visual.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="recursos" class="section">
+            <div class="container">
+                <h2 class="section-title">Feito para tempo e previsão</h2>
+                <p class="section-desc">Tudo gira em torno de uma pergunta: “Consigo terminar a tempo estudando assim?”</p>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        </div>
+                        <h3>Tempo claro</h3>
+                        <p>Total, estudado e restante em cards simples. Progresso geral sempre à mão.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15v-4"/><path d="M12 15V9"/><path d="M16 15v-2"/></svg>
+                        </div>
+                        <h3>Meta diária dinâmica</h3>
+                        <p>A meta de hoje reflete o que falta e os dias até o fim. Estude o necessário, nem mais nem menos.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18"/><path d="M7 10V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"/><rect x="5" y="10" width="14" height="10" rx="2"/></svg>
+                        </div>
+                        <h3>Data de término prevista</h3>
+                        <p>Veja em quantos dias você termina e a previsão em calendário, atualizada conforme você avança.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                        </div>
+                        <h3>Status no ritmo</h3>
+                        <p>Feedback imediato para saber se seu ritmo cobre o prazo — sem planilhas complicadas.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <h3>Histórico visual</h3>
+                        <p>Grade estilo contribuição para ver constância, sequência e dias estudados.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        </div>
+                        <h3>Sessão com timer</h3>
+                        <p>Inicie o cronômetro, some ao tempo do dia e ao acumulado do curso.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="produto" class="section section--gallery">
+            <div class="container">
+                <h2 class="section-title">Assim é por dentro</h2>
+                <p class="section-desc">Interface limpa, foco no que importa: tempo, meta e previsão.</p>
+                <div class="gallery">
+                    <figure class="gallery-item gallery-item--wide">
+                        <img src="assets/app-dashboard.png" alt="Dashboard do curso com totais, meta do dia, previsão de término e botões de ação" width="390" height="720" loading="lazy">
+                        <figcaption>Resumo do curso, meta do dia e previsão</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="assets/app-lessons.png" alt="Lista de aulas com duração, checkboxes e progresso do curso" width="390" height="720" loading="lazy">
+                        <figcaption>Aulas e progresso</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="assets/app-timer.png" alt="Tela de sessão de estudo com cronômetro e tempos acumulados" width="390" height="720" loading="lazy">
+                        <figcaption>Timer de estudo</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="section section--demo" aria-labelledby="demo-title">
+            <div class="container">
+                <h2 id="demo-title" class="section-title">Veja em ação</h2>
+                <p class="section-desc">Um passeio rápido pelo fluxo do app: planejamento, meta do dia e acompanhamento do estudo.</p>
+                <div class="demo-gif-wrap">
+                    <div class="phone-frame phone-frame--demo">
+                        <img src="assets/StudyPlanner.gif" alt="Demonstração animada do StudyPlanner no uso" width="390" height="844" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lista" class="section cta-section">
+            <div class="container cta-inner">
+                <div class="cta-card">
+                    <h2>Entre na lista de acesso antecipado</h2>
+                    <p>Deixe seu e-mail e seja avisado quando o StudyPlanner abrir vagas. Sem spam.</p>
+                    <form id="waitlist-form" class="waitlist-form" method="post" action="#" target="waitlist_iframe">
+                        <label class="sr-only" for="email">E-mail</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required placeholder="seu@email.com" class="input-email">
+                        <button type="submit" class="btn btn--primary">Quero participar</button>
+                    </form>
+                    <iframe class="waitlist-iframe" name="waitlist_iframe" id="waitlist_iframe" title="Envio da lista de espera"></iframe>
+                    <p id="waitlist-msg" class="form-note" hidden></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span class="logo logo--footer">StudyPlanner</span>
+            <p class="footer-tag">Planejamento de estudos · Tempo · Previsão</p>
+            <p class="footer-copy">© <span id="y"></span> StudyPlanner. Página de demonstração.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* Cole aqui a URL da Web App (termina em /exec) após implementar o Apps Script */
+        var WAITLIST_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2B-jEJZWocGrcBaoI5Nn7gBVrk-NRaaQcwqL_4kMiazSRcjbdH-un82u8PNy1mN3S9g/exec';
+
+        (function () {
+            var yEl = document.getElementById('y');
+            if (yEl) yEl.textContent = new Date().getFullYear();
+
+            var toggle = document.querySelector('.menu-toggle');
+            var mobile = document.getElementById('mobile-nav');
+            if (toggle && mobile) {
+                function setMenuOpen(open) {
+                    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+                    mobile.classList.toggle('is-open', open);
+                    mobile.setAttribute('aria-hidden', open ? 'false' : 'true');
+                }
+
+                toggle.addEventListener('click', function () {
+                    setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true');
+                });
+
+                var links = mobile.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function () {
+                        setMenuOpen(false);
+                    });
+                }
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && mobile.classList.contains('is-open')) {
+                        setMenuOpen(false);
+                    }
+                });
+            }
+
+            var waitlistForm = document.getElementById('waitlist-form');
+            var waitlistMsg = document.getElementById('waitlist-msg');
+            if (waitlistForm && waitlistMsg) {
+                waitlistForm.addEventListener('submit', function (e) {
+                    var url = typeof WAITLIST_SCRIPT_URL === 'string' ? WAITLIST_SCRIPT_URL.trim() : '';
+                    if (!url) {
+                        e.preventDefault();
+                        waitlistMsg.textContent =
+                            'Configure WAITLIST_SCRIPT_URL no final desta página com a URL da Web App do Google (veja a pasta waitlist-google-apps-script).';
+                        waitlistMsg.hidden = false;
+                        return;
+                    }
+                    waitlistForm.action = url;
+                    waitlistMsg.textContent = 'Obrigado! Seu e-mail foi registrado.';
+                    waitlistMsg.hidden = false;
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
