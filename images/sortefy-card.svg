@@ -1,0 +1,32 @@
+<svg width="640" height="400" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Preview do projeto Sortefy</title>
+  <desc id="desc">Ilustração do Sortefy com destaque para quiz interativo, QR code, captura de leads e sorteio ao vivo.</desc>
+  <rect width="640" height="400" rx="28" fill="#F6F3FF"/>
+  <rect x="22" y="22" width="596" height="356" rx="24" fill="url(#bg)"/>
+  <rect x="56" y="56" width="158" height="34" rx="17" fill="#EEE7FF"/>
+  <text x="80" y="78" fill="#6D28D9" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Eventos e leads</text>
+  <text x="56" y="136" fill="#1E1B4B" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Sortefy</text>
+  <text x="56" y="176" fill="#4C1D95" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">Quiz, QR Code e sorteios ao vivo</text>
+  <text x="56" y="216" fill="#5B5675" font-family="Inter, Arial, sans-serif" font-size="18">Capture leads qualificados em feiras e eventos</text>
+  <rect x="56" y="260" width="170" height="52" rx="16" fill="#7C3AED"/>
+  <text x="88" y="292" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Ver projeto</text>
+  <rect x="380" y="68" width="196" height="264" rx="28" fill="#FFFFFF" stroke="#DDD6FE"/>
+  <rect x="404" y="94" width="148" height="88" rx="20" fill="#F3E8FF"/>
+  <rect x="418" y="108" width="58" height="58" rx="10" fill="#FFFFFF"/>
+  <path d="M426 116H468V158H426V116Z" stroke="#6D28D9" stroke-width="4"/>
+  <path d="M434 124H444V134H434V124ZM450 124H460V134H450V124ZM434 140H444V150H434V140ZM450 140H460V150H450V140Z" fill="#6D28D9"/>
+  <rect x="488" y="114" width="50" height="10" rx="5" fill="#7C3AED"/>
+  <rect x="488" y="132" width="38" height="10" rx="5" fill="#C4B5FD"/>
+  <rect x="404" y="200" width="148" height="108" rx="20" fill="#F8FAFC"/>
+  <rect x="420" y="220" width="116" height="12" rx="6" fill="#7C3AED"/>
+  <rect x="420" y="242" width="90" height="10" rx="5" fill="#C4B5FD"/>
+  <rect x="420" y="262" width="102" height="10" rx="5" fill="#DDD6FE"/>
+  <circle cx="522" cy="280" r="18" fill="#8B5CF6"/>
+  <path d="M514 280L520 286L531 273" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="bg" x1="22" y1="22" x2="618" y2="378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3E8FF"/>
+    </linearGradient>
+  </defs>
+</svg>
