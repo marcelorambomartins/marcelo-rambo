@@ -265,13 +265,100 @@ img {
 }
 
 .hero-card,
-.founder-card {
+.founder-card,
+.hero-offerings {
     border-radius: var(--radius-lg);
     backdrop-filter: blur(10px);
 }
 
-.hero-card {
+.hero-card,
+.hero-offerings {
     padding: 28px;
+}
+
+.hero-offerings {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.hero-offerings h2 {
+    margin-top: 14px;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+}
+
+.hero-offerings > p {
+    margin-top: 12px;
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: 0.94rem;
+}
+
+.hero-offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-offerings-grid li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 16px;
+    background: rgba(148, 163, 184, 0.06);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.hero-offering-number {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background: rgba(209, 226, 6, 0.14);
+    color: var(--accent-strong);
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.hero-offering-text {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.hero-offerings .stack-chips {
+    margin-top: 18px;
+}
+
+.hero-offerings-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--accent-strong);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-offerings-link:hover {
+    text-decoration: underline;
+}
+
+.hero-card--method .hero-metrics {
+    margin-top: 20px;
+}
+
+.hero-card--method .stack-chips {
+    margin-top: 18px;
 }
 
 .panel-kicker {
@@ -695,6 +782,17 @@ img {
     font-size: 1rem;
 }
 
+.footer-logo {
+    display: block;
+    width: min(240px, 100%);
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    max-width: 42ch;
+}
+
 .footer-column p,
 .footer-column a,
 .footer-note {
@@ -783,6 +881,10 @@ img {
         margin: 0 auto;
     }
 
+    .hero-offerings-grid {
+        grid-template-columns: 1fr;
+    }
+
     .metric {
         flex-direction: column;
         align-items: flex-start;
@@ -794,6 +896,7 @@ img {
 
     .cta-card,
     .hero-card,
+    .hero-offerings,
     .service-card,
     .project-body,
     .process-card,
